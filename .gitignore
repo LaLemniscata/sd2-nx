@@ -1,0 +1,22 @@
+# Game data (never commit — users supply their own copy)
+game/
+dumps/
+*.apk
+*.apks
+*.xapk
+*.obb
+*.so
+global-metadata.dat
+assets/
+
+# Build output
+build/
+*.nro
+*.nacp
+*.elf
+*.map
+
+# Local logs and crash reports
+*.log
+log.txt
+crash_reports/
