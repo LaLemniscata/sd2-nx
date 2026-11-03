@@ -198,7 +198,8 @@ Verificar e registrar em `docs/recon.md`:
   dock), vsync, meta de 60 fps se o jogo suportar; senão 30 fps estável.
 - **Sistema:** pausar ou retomar o Unity no foco/suspend (menu HOME, sleep), salvar antes de sair,
   saída limpa sem crash.
-- **Performance:** medir no console; documentar se algum overclock ajuda, mas o padrão deve rodar bem sem OC.
+- **Performance:** medir no console em modo portátil, 720p e clocks padrão, que é a referência para o Switch Lite; documentar se algum overclock ajuda, mas o padrão deve rodar bem sem OC.
+  O Lite não tem dock: tudo precisa funcionar só em portátil. Sem um Lite para testar, o resultado vale como aproximação feita no OLED e é documentado assim.
 - **config.txt** gerado no primeiro boot com comentários: resoluções, fps, cursor, sensibilidade, logging.
 
 ### Fase 6 — QA
@@ -260,10 +261,10 @@ Regra: cada linha só é marcada como feita depois de testada no console (Fase 6
 ## 7. Perguntas abertas para o LaLemniscata
 
 Responder antes ou durante as fases indicadas:
-1. (Fase 0) Firmware do Switch e versão do Atmosphère? O modelo é o OLED (Mariko), confirmar.
+1. ~~(Fase 0) Firmware do Switch e versão do Atmosphère?~~ Respondida: OLED, firmware 23.0.1, Atmosphère 1.12.1 (ver `docs/recon.md`).
 2. (Fase 0) Versão do SD2 instalada no celular (`versionName`/`versionCode`).
-3. (Fase 1) Aprovar o repositório-base escolhido e a URL.
-4. (Fase 5) Preferência de controles: cursor + atalhos ou só cursor? Quais ações merecem botão dedicado?
+3. ~~(Fase 1) Aprovar o repositório-base escolhido e a URL.~~ Respondida: `cloverpit_nx` (ver `docs/DECISIONS.md`).
+4. ~~(Fase 5) Preferência de controles.~~ Respondida: mapa completo em `docs/controls.md`.
 5. (Fase 5) Resolução e fps padrão por modo.
 6. (Fase 6) Política para fluxos com anúncio premiado (ver seção 6).
 7. (Fase 7) Publicar ou manter privado?

@@ -3,19 +3,16 @@
 _Atualizado: 2026-11-02_
 
 ## Fase atual
-Fase 0 — Viabilidade (gate). Nada avança antes do GO/NO-GO.
+Fase 4 quase concluída (2026-11-03). LaLemniscata confirmou no Switch OLED: tudo funcionando.
 
 ## Funciona
-- (nada ainda)
+- Capa, HOME, Power, anúncios indisponíveis sem prender, fim de aventura, menus online sem travar, controles, toque, save e dock.
 
-## Quebra / bloqueado
-- Aguardando a saída do `adb`/`unzip` da Fase 0 (ver `docs/PLAN.md`, seção 4).
-
-## Pendências do LaLemniscata
-- [ ] Rodar os comandos da Fase 0 com o SD2 instalado pela Google Play.
-- [ ] Informar `versionName`/`versionCode` do SD2.
-- [ ] Informar firmware do Switch e versão do Atmosphère.
-- [ ] Ler o `guide` da seção da ABI (arm64-v8a ou armeabi-v7a) e conferir `planned`/`completed` por um port do SD2.
+## Falta
+- Progresso offline, sessão longa e o resto da Fase 6. Zerar o jogo offline segue sem prova prática.
+- `cp_boot_focus` não é chamado no Switch: o sistema congela o jogo sozinho. Avaliar remoção.
+- Nada commitado: pedido do LaLemniscata.
+- Lite: sem teste em hardware real.
 
 ## Próximo passo
-Preencher `docs/recon.md` com a saída da Fase 0 e decidir GO/NO-GO.
+Sessão longa com progresso offline; depois a matriz da Fase 6.
