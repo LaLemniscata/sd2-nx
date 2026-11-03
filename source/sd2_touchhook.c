@@ -67,8 +67,16 @@ void cp_touchhook_tick(void) {
     g_down = 1;
     break;                    /* primary pointer only */
   }
+  /* A press starts one frame after its position, so hit tests already see the target. */
+  static int s_press_ready;
+  if (g_down && !g_down_prev && !s_press_ready) {
+    g_down = 0;
+    s_press_ready = 1;
+  } else if (!g_down) {
+    s_press_ready = 0;
+  }
   /* Between taps the mouse follows the cursor, so the game's cursor and hover see it. */
-  if (!g_down && nxp_cursor_visible()) {
+  if (!g_down && !s_press_ready && nxp_cursor_visible()) {
     float cx, cy;
     nxp_cursor_pos(&cx, &cy);
     g_x = cx;
