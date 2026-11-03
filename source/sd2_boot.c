@@ -279,8 +279,9 @@ int cp_boot_and_run(void) {
     if (frame_no >= MANAGED_READY_FRAME) {
       sd2_game_tick();
 
-      if (cp_pad_pressed(HidNpadButton_B))
-        sd2_game_close_top_menu();
+      /* Places like the tavern are not menus: the game leaves them on Escape. */
+      if (cp_pad_pressed(HidNpadButton_B) && !sd2_game_close_top_menu())
+        cp_escape_pulse();
 
       if (sd2_config.game_cursor && nxp_cursor_visible() != cursor_shown) {
         cursor_shown = nxp_cursor_visible();

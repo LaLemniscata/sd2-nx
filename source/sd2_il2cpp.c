@@ -262,9 +262,19 @@ static uint8_t hk_GetKey(int keycode) {
   return (g_buttons & mask) ? 1 : 0;
 }
 
+static int g_escape_pulse;
+
+void cp_escape_pulse(void) {
+  g_escape_pulse = 1;
+}
+
 static uint8_t hk_GetKeyDown(int keycode) {
   if (joystick_index_from_keycode(keycode) >= 0)
     return 0;
+  if (keycode == 27 && g_escape_pulse) {
+    g_escape_pulse = 0;
+    return 1;
+  }
   uint64_t mask = game_key_mask(keycode);
   if (!mask)
     return orig_GetKeyDown ? orig_GetKeyDown(keycode) : 0;

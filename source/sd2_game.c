@@ -133,13 +133,14 @@ static int unbox_bool(void *boxed) {
   return boxed ? *(uint8_t *)((uintptr_t)boxed + 0x10) : 0;
 }
 
-void sd2_game_close_top_menu(void) {
+int sd2_game_close_top_menu(void) {
   int ok;
   void *top = call(service("uiSystem"), "GetTopMenu", 0, NULL, &ok);
   if (!ok || !top)
-    return;
+    return 0;
   call(top, "ForceCloseIfPossible", 0, NULL, &ok);
   debugPrintf("[game] B: ForceCloseIfPossible %s\n", ok ? "called" : "failed");
+  return 1;
 }
 
 void sd2_game_save(void) {

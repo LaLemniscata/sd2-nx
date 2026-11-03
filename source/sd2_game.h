@@ -11,7 +11,7 @@
 int sd2_game_bind(so_module *il2cpp);
 
 /* All of these run on the engine main thread, between frames. */
-void sd2_game_close_top_menu(void);   /* UIManager.ForceCloseIfPossible */
+int  sd2_game_close_top_menu(void);   /* UIManager.ForceCloseIfPossible; 0 if no menu */
 void sd2_game_save(void);             /* SaveManager.SaveGameData       */
 void sd2_game_cursor_show(int show);  /* CursorController graphic       */
 /* Answers Backend.RequestAd(placement) as if no ad could be shown. */

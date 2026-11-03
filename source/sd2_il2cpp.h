@@ -92,6 +92,9 @@ void cp_il2cpp_frame_end(void);
 /* True on the frame any button in `mask` goes down. */
 int cp_pad_pressed(uint64_t mask);
 
+/* The game reads Escape as pressed once, on its next check. */
+void cp_escape_pulse(void);
+
 
 /* ---- UnityEngine.Video.VideoPlayer ---------------------------------------
  * Only Panik.IntroScript uses VideoPlayer, and disassembling
