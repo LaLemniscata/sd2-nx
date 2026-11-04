@@ -14,7 +14,7 @@ Fase 4 quase concluída (2026-11-03). LaLemniscata confirmou no Switch OLED: tud
 
 ## Falta
 - Causa exata do desligamento visto com os APKs na pasta principal segue sem prova; mover para `apk/` evitou o problema no teste.
-- Progresso offline e o resto da Fase 6. Zerar o jogo offline segue sem prova prática.
+- Progresso offline confirmado pelo LaLemniscata em 2026-11-04. Falta o resto da Fase 6. Zerar o jogo offline segue sem prova prática.
 - `cp_boot_focus` não é chamado no Switch: o sistema congela o jogo sozinho. Avaliar remoção.
 - Nada commitado: pedido do LaLemniscata.
 - Lite: sem teste em hardware real.
