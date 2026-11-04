@@ -19,4 +19,5 @@ Formato: data — decisão — motivo. Decisões registradas aqui não são perg
 - 2026-11-02 — LaLemniscata escolheu: B volta, salvar ao fechar, cursor do jogo, 1080p no dock, pausa em HOME e sleep, log desligado com `config.txt`, opção de 30 fps. Anúncios decididos depois do teste.
 - 2026-11-02 — Resolução escolhida no boot; trocar o modo durante o jogo só reescala a imagem — recriar a superfície ao vivo é mais arriscado.
 - 2026-11-03 — Anúncio sempre indisponível e sem recompensa; rede de internet recusada no loader mesmo com Wi-Fi ligado — pedido do LaLemniscata.
+- 2026-11-03 — Instalação: `.nro` mais os dois APKs do usuário, com conferência de SHA-256 e extração no primeiro boot. Nenhum arquivo do jogo é distribuído.
 - 2026-11-02 — Antes da Fase 1, conferir `planned`/`completed` da seção da ABI; dúvidas só no `discussion`, nunca por DM — reorganização e regra nova do servidor.

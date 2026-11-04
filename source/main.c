@@ -58,6 +58,7 @@ void cp_gpua_enable(void);   /* sd2_gpuarena.c */
 #include "sd2_touchhook.h"
 #include "sd2_config.h"
 #include "sd2_game.h"
+#include "sd2_extract.h"
 #include "sd2_screen.h"
 #include "sd2_offsets.h"
 
@@ -376,6 +377,7 @@ int main(int argc, char *argv[]) {
    * nothing may log before this returns. */
   cp_resolve_game_root(argc, argv);
   sd2_config_load(cp_game_root());
+  sd2_extract_if_needed(cp_game_root());
 
   socketInitializeDefault();
   debugPrintf("[boot] === sd2_nx start (Unity 6000.0.73f1 / IL2CPP) ===\n");
